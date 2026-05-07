@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>杭电AI校园助手</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>杭电AI校园助手</h1>
+    <p class="subtitle">面向大学生校园生活的智能问答与服务辅助网页</p >
+
+    <section class="card">
+      <h2>校园问答助手</h2>
+      <input id="questionInput" type="text" placeholder="请输入你的问题，例如：校园卡丢了怎么办？">
+      <button onclick="answerQuestion()">提交问题</button>
+      <div id="answerBox" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>宿舍报修助手</h2>
+      <input id="buildingInput" type="text" placeholder="请输入宿舍楼号，例如：12号楼">
+      <input id="roomInput" type="text" placeholder="请输入寝室号，例如：306">
+      <select id="repairType">
+        <option value="灯坏了">灯坏了</option>
+        <option value="空调故障">空调故障</option>
+        <option value="水龙头漏水">水龙头漏水</option>
+        <option value="网络异常">网络异常</option>
+      </select>
+      <button onclick="generateRepair()">生成报修文本</button>
+      <div id="repairBox" class="result"></div>
+    </section>
+
+    <section class="card">
+      <h2>课程学习建议</h2>
+      <input id="courseInput" type="text" placeholder="请输入课程名，例如：程序设计基础">
+      <button onclick="courseAdvice()">获取建议</button>
+      <div id="courseBox" class="result"></div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
